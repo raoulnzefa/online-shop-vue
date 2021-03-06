@@ -1,9 +1,9 @@
 <template>
-  <div class="flex">
-      <div class="flex-none w-16">
+  <div class="flex justify-items-start md:justify-items-center">
+      <div class="flex-none w-100 ">
           <Tabs />
       </div>
-      <div class="flex-grow">
+      <div class="flex-grow w-100">
           <Products />
       </div>
   </div>
