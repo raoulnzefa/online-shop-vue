@@ -1,4 +1,4 @@
-var img = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Ffabrikbrands.com%2Fhow-to-name-a-product%2F&psig=AOvVaw35vXZ1EdlV4h1JcPiwUFbK&ust=1613736602361000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIi9w7qz8-4CFQAAAAAdAAAAABAD'
+var img = '@/assets/images/product.jpg'
 export  const products = [
     { id: 1, name: 'Cement', count: 124, price: 1500, image: img },
     { id: 2, name: 'Spoon', count: 124, price: 15123, image: img },

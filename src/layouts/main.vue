@@ -2,7 +2,7 @@
   <div>
       <Header />
   </div>
-  <div>
+  <div class="mt-16">
       <router-view />
   </div>
 </template>
