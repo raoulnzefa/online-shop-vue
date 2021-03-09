@@ -7,7 +7,6 @@
       <img
         class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0"
         src="@/assets/images/product.jpg"
-        alt="Woman's Face"
       />
       <div class="text-center space-y-2 sm:text-left">
         <div class="space-y-0.5">
@@ -17,7 +16,8 @@
         <button
           class="px-4 py-1
           text-right rounded-full border border-purple-200 
-          hover:bg-purple-600 hover:border-transparent "
+          hover:bg-purple-600 hover:border-transparent"
+          @click="addCart(product)"
         >
           <img class="chat-notification-logo mt-2" src="../assets/icons/shopping-cart.svg" alt="ChitChat Logo">
         </button>
@@ -28,13 +28,22 @@
 </template>
 
 <script>
-import { products } from "@/data/products";
+import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
-      products: products,
-    };
+      // products: products,
+    }
   },
+  computed: {
+    ...mapGetters({ products: 'GET_PRODUCTS', carts: 'GET_CART_PRODUCTS' })
+  },
+  methods: {
+    ...mapActions({ storeProduct: 'storeProduct' }),
+    addCart(product) {
+      this.storeProduct(product)
+    }
+  }
 };
 </script>
 

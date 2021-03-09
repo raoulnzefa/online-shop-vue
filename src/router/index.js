@@ -10,16 +10,11 @@ const routes = [
         path: '/',
         component: () => import('@/views/Main'),
       },
-      // {
-      //   name: 'Basket',
-      //   path: '/basket',
-      //   component: () => import('@/views/basket'),
-      // },
-      // {
-      //   name: 'ChooseAppModul',
-      //   path: '/product/:id(\\d+)',
-      //   component: () => import('@/views/product'),
-      // }
+      {
+        name: 'Cart',
+        path: '/cart',
+        component: () => import('@/views/Cart'),
+      }
     ]
   },
 ];
