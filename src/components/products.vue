@@ -13,15 +13,17 @@
           <p class="text-lg text-black font-semibold">{{ product.name }}</p>
           <p class="text-gray-500 font-medium">{{ product.price }} so'm</p>
         </div>
-        <button
-          class="px-4 py-1
-          text-right rounded-full border border-purple-200 
-          hover:bg-purple-600 hover:border-transparent"
-          @click="addCart(product)"
-        >
-          <img class="chat-notification-logo mt-2" src="../assets/icons/shopping-cart.svg" alt="ChitChat Logo">
-        </button>
       </div>
+        <div class="text-right">
+          <button
+            class="px-4 py-1
+            text-right rounded-full border border-purple-200 
+            hover:bg-purple-600 hover:border-transparent"
+            @click="addCart(product)"
+          >
+            <img class="chat-notification-logo mt-2" src="../assets/icons/shopping-cart.svg" alt="ChitChat Logo">
+          </button>
+        </div>
     </div>
   </div>
  </div>

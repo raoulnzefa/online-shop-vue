@@ -22,7 +22,7 @@ const store = createStore({
     },
     GET_TABS (state) {
       return state.tabs
-    },
+    },    
     GET_CART_PRODUCTS (state) {
       console.log(state);
       return state.cart_product
@@ -43,14 +43,28 @@ const store = createStore({
       })
     },
     SET_ADD_CART_PRODUCT: (state, data) =>  {
-      console.log(data);
-      console.log(state.carts, carts);
       let index_c = carts.length
-      // let index_p = carts[index_c-1].products.length
-      console.log(index_c, index_c);
-
       carts[index_c-1].products.push(data)
       state.cart_product = carts[index_c-1].products
+    },
+    SET_COUNT_PRODUCT (state, data) {
+      if (state.cart_product && state.cart_product.length ) {
+        state.cart_product.forEach(product => {
+          if (product.id == data.id) {
+            if (data.type == 'add') {
+              product.count++
+            } else if ((data.type == 'inc') && (product.count > 1)) {
+              product.count--            
+            }
+          }
+        })
+      }
+    },
+    DELETE_PRODUCT: (state, id) =>  {
+      var index = state.cart_product.map(product => {
+        return product.id;
+      }).indexOf(id);
+      state.cart_product.splice(index, 1);
     }
   },
   actions: {
@@ -62,7 +76,13 @@ const store = createStore({
     },
     storeProduct ({commit}, data) {
       commit('SET_ADD_CART_PRODUCT', data)
-    }  
+    },
+    storeCount ({commit}, data) {
+      commit('SET_COUNT_PRODUCT', data)
+    },
+    deleteProduct({commit}, id) {
+      commit('DELETE_PRODUCT', id)
+    }
   }
 })
 

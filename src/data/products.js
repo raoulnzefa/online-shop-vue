@@ -8,9 +8,9 @@ export  const products = [
     { id: 6, name: 'Jacuzzi', count: 1, price: 11235, image: img },
     { id: 7, name: 'Crock-Pot', count: 1, price: 56415, image: img },
     { id: 8, name: 'Fluffernutter', count: 1, price: 14565, image: img },
-    { id: 8, name: 'Seeing Eye Dog', count: 1, price: 45615, image: img },
-    { id: 8, name: 'Breathalyzer', count: 1, price: 45615, image: img },
-    { id: 8, name: 'Zamboni', count: 1, price: 45615, image: img },
-    { id: 8, name: 'Chapstick ', count: 1, price: 78915, image: img },
-    { id: 8, name: 'Kleenex', count: 1, price: 17895, image: img }
+    { id: 9, name: 'Seeing Eye Dog', count: 1, price: 45615, image: img },
+    { id: 10, name: 'Breathalyzer', count: 1, price: 45615, image: img },
+    { id: 11, name: 'Zamboni', count: 1, price: 45615, image: img },
+    { id: 12, name: 'Chapstick ', count: 1, price: 78915, image: img },
+    { id: 13, name: 'Kleenex', count: 1, price: 17895, image: img }
 ]
