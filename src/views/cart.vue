@@ -35,12 +35,12 @@
               <div class="absolute top-0 right-0 rounded-full bg-amber-50 text-amber-900 px-2 py-0.5 hidden sm:flex lg:hidden xl:flex items-center space-x-1">
                 <dd>{{product.price * product.count}} so'm</dd>
                 <dt>
-                  <button @click="addCount(product)" class="inline-flex items-center justify-center w-5 h-5 text-indigo-100 transition-colors duration-150 bg-indigo-500 rounded-full focus:shadow-outline hover:bg-indigo-800">
-                    +
-                  </button>
-                  {{ product.count }}
                   <button @click="incCount(product)" class="inline-flex items-center justify-center w-5 h-5 text-indigo-100 transition-colors duration-150 bg-indigo-500 rounded-full focus:shadow-outline hover:bg-indigo-800">
                     -
+                  </button>
+                  {{ product.count }}
+                  <button @click="addCount(product)" class="inline-flex items-center justify-center w-5 h-5 text-indigo-100 transition-colors duration-150 bg-indigo-500 rounded-full focus:shadow-outline hover:bg-indigo-800">
+                    +
                   </button>
                 </dt>
               </div>
