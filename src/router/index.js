@@ -1,4 +1,4 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from 'vue-router'
 
 const routes = [
   {
@@ -8,20 +8,30 @@ const routes = [
       {
         name: 'Main',
         path: '/',
-        component: () => import('@/views/Main'),
+        component: () => import('@/views/Main')
       },
       {
         name: 'Cart',
         path: '/cart',
-        component: () => import('@/views/Cart'),
+        component: () => import('@/views/Cart')
+      },
+      {
+        name: 'Login',
+        path: '/login',
+        component: () => import('@/views/Login')
+      },
+      {
+        name: 'Register',
+        path: '/register',
+        component: () => import('@/views/Register')
       }
     ]
-  },
-];
+  }
+]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-});
+  routes
+})
 
-export default router;
+export default router
